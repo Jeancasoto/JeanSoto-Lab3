@@ -1,16 +1,18 @@
 #include<string>
 #include<iostream>
 #include<vector>
+#include<sstream>
 
 using namespace std;
 
-int opcion=0;
-string a;
-string m;
-string d;
-
+string tostring(string, string, string);
 
 int main(){
+	vector <string> vec;
+	while(true){
+	
+	int opcion=0;
+
 	cout<<"Acontinuacion dispone de 3 opciones"<<endl<<"Ingrese 1-Poda y busca "<<endl
 		<<"Ingrese 2-El teorema de Ruffini"<<endl<<"Ingrese 3-Guardar fechas en formato"<<endl;
 	cin>>opcion;
@@ -32,6 +34,10 @@ int main(){
 
 			//cout<<dia<<endl;
 			
+			string a="";
+			string m="";
+			string d="";
+
 			for(int i=0; i<dia.length();i++){
 			
 
@@ -46,14 +52,15 @@ int main(){
 				}
 			}
 
-				//cout<<dia[i]<<endl;
+				//cout<<dia[i]<<endl
+				//
 
 				cout<<"AÑO "<<a<<endl;
 					
 				int mes=atoi(m.c_str());
-				
+				string mm;
 					if(mes==1){
-					       cout<<"MES "<<"Enero"<<endl;
+					      cout<<"MES "<<"Enero"<<endl;
 					       }
 					if(mes==2){
 					       cout<<"MES "<<"Febrero"<<endl;
@@ -96,18 +103,46 @@ int main(){
 				
 					
 
-				cout<<"DIA "<<d<<endl;
-			
+				cout<<"DIA "<<d<<endl<<endl;
+
+				//string fecha="Dia"+d+"Mes:"+m+"Year:"+a;
+				string fechaVAR=tostring(a,m,d);
+
+				cout<<fechaVAR<<endl<<endl;
+	
+				vec.push_back(fechaVAR);
+				
+				cout<<"Imprime fechas"<<endl;
+				cout<<fechaVAR<<endl;
+
+				//cout<<vec<<endl;
+				for(int i=0; vec.size()-1; i++){
+					cout<<vec[i];
+				
+				}
 				
 		
+		       }//Fin switch
+		
+		}//Fin while
 
-		       }
-		       break;
-	
 	}	
 		
 
 
 
 return 0;
+}//Fin main
+
+string tostring(string a, string m, string d){
+	stringstream ss;
+	ss<<" Year:";
+	string aa=a;
+	string mm=m;
+	string dd=d;
+	ss<<aa<<" Mes:";
+	ss<<mm;
+	ss<<" Dia "<<dd;
+	return ss.str();
 }
+
