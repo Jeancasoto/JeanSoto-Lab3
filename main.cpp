@@ -48,54 +48,55 @@ int main(){
 
 				//cout<<dia[i]<<endl;
 
-				cout<<"AÑO"<<a<<endl;
+				cout<<"AÑO "<<a<<endl;
+					
+				int mes=atoi(m.c_str());
 				
-				/*switch(stoi(m)){
-					case 1:{
+					if(mes==1){
 					       cout<<"MES "<<"Enero"<<endl;
 					       }
-					case 2:{
+					if(mes==2){
 					       cout<<"MES "<<"Febrero"<<endl;
 					       }
-					case 3:{
+					if(mes==3){
 					       cout<<"MES "<<"Marzo"<<endl;
 					       }
-					case 4:{
+					if(mes==4){
 					       cout<<"MES "<<"Abril"<<endl;
 					       }
-					case 5:{
+					if(mes==5){
 					       cout<<"MES "<<"Mayo"<<endl;
 					       }
-					case 6:{
+					if(mes==6){
 					       cout<<"MES "<<"Junio"<<endl;
 					       }
-					case 7:{
+					if(mes==7){
 					       cout<<"MES "<<"Julio"<<endl;
 					       }
-					case 8:{
+					if(mes==8){
 					       cout<<"MES "<<"Agosto"<<endl;
 					       }
-					case 9:{
+					if(mes==9){
 					       cout<<"MES "<<"Septiembre"<<endl;
 					       }
-					case 10:{
+					if(mes==10){
 						cout<<"MES "<<"Octubre"<<endl;
 						}
-					case 11:{
+					if(mes==11){
 						cout<<"MES "<<"Noviembre"<<endl;
 						}
-					case 12:{
+					if(mes==12){
 						cout<<"MES "<<"Diciembre"<<endl;
 						}
 
-				}*/
+				
 			
 				
-				cout<<"MES"<<m<<endl;
-				int mes=atoi(m.c_str());
-				cout<<mes<<endl;	
+				//cout<<"MES"<<m<<endl;
+				
+					
 
-				cout<<"DIA"<<d<<endl;
+				cout<<"DIA "<<d<<endl;
 			
 				
 		
